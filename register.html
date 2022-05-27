@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/gird.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="" class="logo"><img src="img/logo.png" alt="" /></a>
+        <nav>
+          <a href="#home" class="active">home</a>
+          <a href="#pages" id="dowp-down">
+            PAGES
+            <div class="drow-down-item">
+              <span>About</span>
+              <span>Testimonial</span>
+            </div>
+          </a>
+          <a href="#products">PRODUCTS</a>
+          <a href="#blog">BLOG</a>
+          <a href="#content">CONTACT</a>
+          <div class="action-btn">
+            <i class="fa fa-shopping-cart" aria-hidden="true" id="cart-btn">
+              <span>0</span>
+            </i>
+            <i class="fa fa-search" aria-hidden="true" id="search-btn"></i>
+          </div>
+        </nav>
+        <form action="" class="search-bar-container active">
+          <input type="search" id="search-bar" placeholder="search here..." />
+        </form>
+      </header>
+      <div class="mobile-nav">
+        <div class="menu">
+          <h4>menu</h4>
+          <i class="fa fa-times" aria-hidden="true" id="close-nav"></i>
+        </div>
+        <a href="#home">home</a>
+        <a href="#pages">PAGES</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#blog">BLOG</a>
+        <a href="#content">CONTACT</a>
+      </div>
+      <div class="my-products">
+        <div class="menu">
+          <h4>menu</h4>
+          <i class="fa fa-times" aria-hidden="true" id="close-product"></i>
+        </div>
+        <div class="products-details ">
+          <div class="products-info">
+            <img src="img/men1.jpg" alt="">
+            <p>productName</p>
+          </div>
+          <div class="count-btn">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            <span>1</span>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+          <span id="prise">100$</span>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+      <!-- end header -->
+      <!-- strat register -->
+      <section class="register">
+          <div class="container">
+             <div class="content">
+                <form action="#" method="post">
+                    <div class="name">
+                      <input type="text" placeholder="Frist Name" id="f-name" class="requird" >
+                      <input type="text" placeholder="last Name" id="l-name" class="requird">
+                    </div>
+                    <input type="email" placeholder="Email" id="email" class="requird">
+                    <input type="password" placeholder="Password" id="password" class="requird">
+                    <input type="password" placeholder="Confirm Password" id="c-password" class="requird">
+                    <div class="gender">
+                      <input type="radio" id="male" value="male" name="gender">
+                      <label for="male">male</label>
+                      <input type="radio" id="female" value="female" name="gender">
+                      <label for="female">female</label>
+                    </div>
+                    <!-- <input type="date" placeholder="Brith date" > -->
+                    <input type="text" placeholder="MM/DD/YYYY"
+                    onfocus="(this.type='date', this.style = 'border: 1px solid #002c3ea8')" onblur="(this.type='text')" id="date" class="requird">
+                    <input type="submit" value="Register" id="register">
+                    <a href="login.html">already have account</a>
+                </form>
+             </div>
+          </div>
+      </section>
+      <!-- end register -->
+    <footer >
+        <div class="container">
+            <div class="row">
+                <ul class="list g-3 md-12 one">
+                    <li class="head"><img src="img/logo.png" alt=""></li>
+                    <li><span>ADDRESS:</span>28 White tower, Street Name New York City, USA</li>
+                    <li><span>TELEPHONE:</span>+91 987 654 3210</li>
+                    <li><span>EMAIL:</span>yourmain@gmail.com</li>
+                </ul>
+                <ul class="list g-3 md-12 two">
+                    <li class="head">MENU</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonial</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="list g-3 md-12 three">
+                    <li class="head">ACCOUNT</li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">Widget</a></li>
+                </ul>
+                <ul class="list g-3 md-12 four">
+                    <li class="head">NEWSLETTER</li>
+                    <li>Subscribe by our newsletter and get update protidin.</li>
+                    <li class="input"><input type="email" placeholder="Eenter Your Email"> <button>subscribe</button></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copy-right">
+        <p>© 2021 All Rights Reserved By <span> DS Company</span></p>
+        <p>Distributed By <span>DS Company</span></p>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

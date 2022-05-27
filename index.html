@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrab CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- css link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gird.css"/>
+  <title>Document</title>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header class="shadow-sm ">
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="index.html" class="logo">D<span>&</span>S</a>
+    <nav>
+      <a href="index.html" class="active">home</a>
+      <a href="#pages" id="dowp-down">
+        PAGES
+        <div class="drow-down-item">
+          <span>About</span>
+          <span>Testimonial</span>
+        </div>
+      </a>
+      <a href="allProducts.html">PRODUCTS</a>
+      <a href="#blog">BLOG</a>
+      <a href="#content">CONTACT</a>
+      <div class="action-btn">
+        <i class="fa fa-shopping-cart" aria-hidden="true" id="cart-btn">
+          <span>0</span>
+        </i>
+        <i class="fa fa-search" aria-hidden="true" id="search-toggole"></i>
+        <span id="user"><i class="fa fa-user" aria-hidden="true"></i></span>
+      </div>
+    </nav>
+    <form class="search-bar-container active">
+      <input type="search" id="search-bar" placeholder="search here..." />
+      <button id="search-filter-btn"> <i class="fas fa-sort-amount-down"></i></button>
+      <button id="search"> <i class="fa fa-search" aria-hidden="true"></i></button>
+
+
+    </form>
+
+
+  </header>
+  <div class="search-filter-menu">
+    <div class="menu  mb-3">
+      <h4>Filters</h4>
+      <i class="fa fa-times" aria-hidden="true" id="close-filters"></i>
+
+    </div>
+    <div class="category mb-3 px-3 position-relative">
+      <h5>Category</h5>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="categoryCheck1">
+        <label class="form-check-label" for="categoryCheck1">
+          Men
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="categoryCheck2">
+        <label class="form-check-label" for="categoryCheck2">
+          Women
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="categoryCheck3">
+        <label class="form-check-label" for="categoryCheck3">
+          Kids
+        </label>
+      </div>
+
+    </div>
+
+    <div class="size mb-3 px-3 position-relative">
+      <h5>Size</h5>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="sizeCheck1">
+        <label class="form-check-label" for="sizeCheck1">
+          S
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="sizeCheck2">
+        <label class="form-check-label" for="sizeCheck2">
+          M
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="sizeCheck3">
+        <label class="form-check-label" for="sizeCheck3">
+          L
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input p-0" type="checkbox" value="" id="sizeCheck4">
+        <label class="form-check-label" for="sizeCheck4">
+          XL
+        </label>
+      </div>
+
+    </div>
+    <div class="price mb-3 px-3 position-relative">
+      <h5>Price Range</h5>
+      <div class="price-input">
+        <div class="field">
+          <span>Min</span>
+          <input type="number" class="input-min" value="0">
+        </div>
+        <div class="separator">-</div>
+        <div class="field">
+          <span>Max</span>
+          <input type="number" class="input-max" value="10000">
+        </div>
+      </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+        <input type="range" class="range-max" min="0" max="10000" value="10000" step="100">
+      </div>
+
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <div class="menu">
+      <h4>menu</h4>
+      <i class="fa fa-times" aria-hidden="true" id="close-nav"></i>
+    </div>
+    <a href="index.html">home</a>
+    <a href="#pages">PAGES</a>
+    <a href="allProducts.html">PRODUCTS</a>
+    <a href="#blog">BLOG</a>
+    <a href="#content">CONTACT</a>
+  </div>
+  <div class="my-products">
+    <div class="menu">
+      <h4>menu</h4>
+      <i class="fa fa-times" aria-hidden="true" id="close-product"></i>
+    </div>
+    <div class="myProduct">
+      <div class="products-details">
+        <div class="products-info">
+          <img src="images/men1.jpg" alt="">
+          <p>shirt</p>
+        </div>
+        <div class="count-btn">
+          <i class="fa fa-minus" aria-hidden="true"></i>
+          <span>1</span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+        <span id="prise">100$</span>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div id="total-cost"></div>
+    <a href="cart.html" class="viewCart text-center d-block mt-5 text-light fs-4 ">View All</a>
+  </div>
+  <!-- end header -->
+  <!-- start home section -->
+  <section class="home">
+    <!-- <div class="overlay"></div> -->
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="title"><span class="d-block">Sale 20% Off</span>
+              On Everything</h2>
+            <p class=" my-4">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse
+              dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus
+              repellat modi impedit sequi.</p>
+            <button class="rounded">Shop Now</button>
+          </div>
+          <div class="carousel-item ">
+            <h2 class="title"><span class="d-block">Sale 20% Off</span>
+              On Everything</h2>
+            <p class=" my-4">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse
+              dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus
+              repellat modi impedit sequi.</p>
+            <button class="rounded">Shop Now</button>
+          </div>
+          <div class="carousel-item">
+            <h2 class="title"><span class="d-block">Sale 20% Off</span>
+              On Everything</h2>
+            <p class=" my-4">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse
+              dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus
+              repellat modi impedit sequi.</p>
+            <button class="rounded">Shop Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end home section -->
+  <!-- start choose us -->
+  <section class="choose-us">
+    <div class="sec-title">
+      <h2>Why Shop With Us</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="card shadow-sm g-4 sm-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+          <div class="card-body">
+            <div class="box-icon">
+              <img src="img/delivery-truck.png" alt="">
+            </div>
+            <div class="box-info">
+              <h3>Fast Delivery</h3>
+              <p>variations of passages of Lorem Ipsum available</p>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-sm g-4 sm-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"
+          data-aos-delay="300">
+          <div class="card-body">
+            <div class="box-icon">
+              <img src="img/free (1).png" alt="">
+            </div>
+            <div class="box-info">
+              <h3>Free Shiping</h3>
+              <p>variations of passages of Lorem Ipsum available</p>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-sm g-4 sm-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"
+          data-aos-delay="600">
+          <div class="card-body">
+            <div class="box-icon">
+              <img src="img/medal.png" alt="">
+            </div>
+            <div class="box-info">
+              <h3>Best Quality</h3>
+              <p>variations of passages of Lorem Ipsum available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end choose us -->
+  <!-- start arrival -->
+  <section class="arrival">
+    <div class="container">
+      <div class="row">
+        <div class="img-box g-6 sm-12">
+          <img src="img/arrival-bg.png" alt="">
+        </div>
+        <div class="info-box g-6 sm-12">
+          <h2>#new arrivals</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae veniam distinctio nisi ipsam architecto
+            deserunt eligendi dolorum consequatur eius ratione fugit, placeat numquam ea vero, voluptatem veritatis.
+            Nobis necessitatibus libero voluptas optio esse ullam cupiditate odio debitis, ipsum omnis placeat veniam
+            sunt. Est qui quibusdam officiis illo expedita alias porro?</p>
+          <button class="btn rounded">shop
+            now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end arrival -->
+  <section class="our-products">
+    <div class="container">
+      <h2 class="sec-title"> <span>O</span>ur <span>P</span>roducts </h2>
+      <div class="products row row-cols-1 row-cols-sm-2  row-cols-lg-3 " data-aos="zoom-in-up" data-aos-duration="1500">
+
+      </div>
+      <button class="m-auto d-block mt-5 rounded" id="all-products-btn"> VIEW ALL PRODUCTS</button>
+    </div>
+  </section>
+  <section class="subscribe">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 m-auto d-flex flex-column">
+          <h2>Subscribe To Get Discount Offers</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          <input type="email" class="my-3 rounded-pill" placeholder="Enter Your E-mail">
+          <button class="w-50 m-auto my-3  rounded-pill">SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonilas">
+    <div class="container">
+      <div class="row">
+        <div class="">
+          <h2 class="sec-title">
+            Customer's Testimonial
+          </h2>
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <!-- col-12 col-md-6 m-auto d-flex flex-column -->
+            <div class="carousel-inner">
+              <div class=" carousel-item active" data-bs-interval="10000">
+                <div
+                  class=" d-flex flex-column align-items-center justify-content-center m-auto mb-3 position-relative">
+                  <img src="images/testi3.jpg" alt="">
+                  <span class="testi-name text-black fw-bold">Hamza Abdalla</span>
+                  <span class="testi-title mb-3">Customer</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, laudantium odit! Sed nam et explicabo
+                    aut, porro maiores similique fugit sint nihil, consequatur iure praesentium? Rerum velit labore ea
+                    quidem!</p>
+                </div>
+
+
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div
+                  class=" d-flex flex-column align-items-center justify-content-center m-auto mb-3 position-relative">
+                  <img src="images/testi1.jpg" alt="">
+                  <span class="testi-name text-black fw-bold">Habeeba Ahmed</span>
+                  <span class="testi-title mb-3">Customer</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, laudantium odit! Sed nam et explicabo
+                    aut, porro maiores similique fugit sint nihil, consequatur iure praesentium? Rerum velit labore ea
+                    quidem!</p>
+                </div>
+
+
+              </div>
+              <div class="carousel-item">
+                <div
+                  class=" d-flex flex-column align-items-center justify-content-center m-auto mb-3 position-relative">
+                  <img src="images/testi2.jpg" alt="">
+                  <span class="testi-name text-black fw-bold">Mona Ahmed</span>
+                  <span class="testi-title mb-3">Customer</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, laudantium odit! Sed nam et explicabo
+                    aut, porro maiores similique fugit sint nihil, consequatur iure praesentium? Rerum velit labore ea
+                    quidem!</p>
+                </div>
+
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="list g-3 md-12 one">
+          <li class="head"><img src="img/logo.png" alt=""></li>
+          <li><span>ADDRESS:</span>28 White tower, Street Name New York City, USA</li>
+          <li><span>TELEPHONE:</span>+91 987 654 3210</li>
+          <li><span>EMAIL:</span>yourmain@gmail.com</li>
+        </ul>
+        <ul class="list g-3 md-12 two">
+          <li class="head">MENU</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Testimonial</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="list g-3 md-12 three">
+          <li class="head">ACCOUNT</li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Checkout</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Shopping</a></li>
+          <li><a href="#">Widget</a></li>
+        </ul>
+        <ul class="list g-3 md-12 four">
+          <li class="head">NEWSLETTER</li>
+          <li>Subscribe by our newsletter and get update protidin.</li>
+          <li class="input"><input type="email" placeholder="Eenter Your Email"> <button
+              class="rounded">subscribe</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">
+    <p>© 2021 All Rights Reserved By <span> DS Company</span></p>
+    <p>Distributed By <span>DS Company</span></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/data.js"></script>
+  <script src="js/genral.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
